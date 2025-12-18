@@ -40,3 +40,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+main {
+  margin-top: 5rem; /* already there */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
