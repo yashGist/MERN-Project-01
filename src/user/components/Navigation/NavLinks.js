@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const NavLinks = (props) => {
   return (
-    <ul className="nav-links">
+    <ul className="nav-links" onClick={props.onClick}>
       <li>
         <NavLink to="/">ALL USERS</NavLink>
       </li>
