@@ -5,7 +5,12 @@
   width: 100%;
   max-width: 40rem;
 }
-
+.place-list__empty {
+  width: 100%;
+  max-width: 50rem;
+  padding: 2rem;
+  text-align: center;
+}
 .places-list li::marker {
   content: none;
 }
