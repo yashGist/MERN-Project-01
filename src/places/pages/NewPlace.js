@@ -1,19 +1,16 @@
-import React, { useCallback, useReducer } from "react";
+import React from "react";
 import Input from "../../shared/FormElements/Input";
 import "./PlaceForm.css";
 import Button from "../../shared/FormElements/Button";
 import {
-  VALIDATOR_MINLENGTH,
   VALIDATOR_REQUIRE,
+  VALIDATOR_MINLENGTH,
 } from "../../shared/util/validators";
 import { useForm } from "../../shared/hooks/form-hook";
 
-/* =========================
-   COMPONENT
-========================= */
 const NewPlace = () => {
-  const [formState, inputHandler] = useForm({
-    inputs: {
+  const [formState, inputHandler] = useForm(
+    {
       title: {
         value: "",
         isValid: false,
@@ -22,12 +19,17 @@ const NewPlace = () => {
         value: "",
         isValid: false,
       },
+      address: {
+        value: "",
+        isValid: false,
+      },
     },
-  });
+    false
+  );
 
   const placeSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(formState.inputs); // later send to backend
+    console.log(formState.inputs);
   };
 
   return (
@@ -41,6 +43,7 @@ const NewPlace = () => {
         errorText="Please enter a valid title."
         onInput={inputHandler}
       />
+
       <Input
         id="description"
         element="textarea"
@@ -48,16 +51,18 @@ const NewPlace = () => {
         validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(5)]}
         errorText="Please enter at least 5 characters."
         onInput={inputHandler}
-      />{" "}
+      />
+
       <Input
         id="address"
         element="input"
         type="text"
         label="Address"
         validators={[VALIDATOR_REQUIRE()]}
-        errorText="Please enter a valid title."
+        errorText="Please enter a valid address."
         onInput={inputHandler}
       />
+
       <Button type="submit" disabled={!formState.isValid}>
         ADD PLACE
       </Button>
