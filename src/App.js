@@ -5,6 +5,7 @@ import Users from "./user/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
 import MainNavigation from "./user/components/Navigation/MainNavigation";
 import UserPlaces from "./places/pages/UserPlaces";
+import UpdatePlace from "./places/pages/UpdatePlace";
 const App = () => {
   return (
     <Router>
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Users />} />
           <Route path="/:userId/places" element={<UserPlaces />} />
           <Route path="/places/new" element={<NewPlace />} />
+          <Route path="/places/:placeId/edit" element={<UpdatePlace />} />
         </Routes>
       </main>
     </Router>
