@@ -13,7 +13,7 @@ const DUMMY_PLACES = [
   },
   {
     id: 1,
-    title: "Empire State Building",
+    title: "Animal Kingdom",
     description: "One of the most famous sky scrapper in the world!",
     imageURL: "https://picsum.photos/seed/picsum/800/600",
     address: "20 W 34th St, New York, NY 10001, United States",
