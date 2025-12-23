@@ -1,6 +1,7 @@
 .card {
-  background: white; /* white card */
+  background: white;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  overflow: hidden; /* REQUIRED for image */
+  overflow: hidden;
+  padding: 1rem;
 }
